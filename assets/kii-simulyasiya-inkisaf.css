@@ -1,103 +1,101 @@
+.sim-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #00ffcc;
+}
 
-  .sim-container {
-    max-width: 800px;
-    margin:30px auto;
-    background-color: #1e1e1e;
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 4px solid #00ffcc;
+h1 {
+  text-align: center;
+  color: #00ffcc;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+select {
+  background-color: #181818;
+  color: #e0e0e0;
+  border: 1px solid #00ffcc;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #00ffcc;
+  color: #000;
+  padding: 0.7rem 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1rem 0.5rem;
+}
+
+button:hover {
+  background-color: #00ddb0;
+}
+
+.scada-graphic {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.scada-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.scada-box {
+  display: inline-block;
+  background-color: #222;
+  border: 2px solid #00ffcc;
+  color: #e0e0e0;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  transition: 0.4s ease;
+}
+
+.scada-box.compromised {
+  background-color: #400000;
+  border-color: #ff4c4c;
+}
+
+.log {
+  background: #181818;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  font-family: monospace;
+}
+
+.log-line {
+  margin: 0.5rem 0;
+  animation: fadeIn 0.7s ease-in;
+}
+
+.result {
+  background: #181818;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+  border-left: 4px solid #00ffcc;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  h1 {
-    text-align: center;
-    color: #00ffcc;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-right: 0.5rem;
-  }
-  
-  select {
-    background-color: #181818;
-    color: #e0e0e0;
-    border: 1px solid #00ffcc;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  button {
-    background-color: #00ffcc;
-    color: #000;
-    padding: 0.7rem 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 1rem 0.5rem;
-  }
-  
-  button:hover {
-    background-color: #00ddb0;
-  }
-  
-  .scada-graphic {
-    margin-top: 2rem;
-    text-align: center;
-  }
-  
-  .scada-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .scada-box {
-    display: inline-block;
-    background-color: #222;
-    border: 2px solid #00ffcc;
-    color: #e0e0e0;
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 6px;
-    transition: 0.4s ease;
-  }
-  
-  .scada-box.compromised {
-    background-color: #400000;
-    border-color: #ff4c4c;
-  }
-  
-  .log {
-    background: #181818;
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 2rem;
-    font-family: monospace;
-  }
-  
-  .log-line {
-    margin: 0.5rem 0;
-    animation: fadeIn 0.7s ease-in;
-  }
-  
-  .result {
-    background: #181818;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    text-align: center;
-    border-left: 4px solid #00ffcc;
-  }
-  
-  .fade-in {
-    animation: fadeIn 1s ease-in forwards;
-    opacity: 0;
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  
+}

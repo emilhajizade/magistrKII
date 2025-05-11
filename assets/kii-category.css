@@ -49,9 +49,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.sector-nav button:hover {
-  background: #00ffcc22;
-}
+
 
 /* Kartlar */
 .card {
