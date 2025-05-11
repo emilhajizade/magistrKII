@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero-Day Hücumlar: Gözlənilməz Risk</title>
+ <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1, h2 {
+  color: #00ffc3;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+article {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #00ffc3;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 255, 204, 0.1);
+}
+
+button {
+  background: #00ffc3;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00bfa6;
+}
+
+ </style>
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+  <div class="container">
+    <h1>Zero-Day Hücumlar: Gözlənilməz Risk</h1>
+    <p><strong>Tarix:</strong> 10 may 2025</p>
+
+    <p><strong>Zero-day</strong> boşluqları — proqram təminatında hələ istehsalçı tərəfindən tanınmamış, yamaqlanmamış və istifadəçilərin xəbəri olmayan zəifliklərdir. Bu boşluqlardan sui-istifadə edən hücumlar adətən çox təhlükəli olur, çünki onların qarşısını almaq üçün müdafiə tədbirləri hələ hazırlanmayıb.</p>
+
+    <h2>Zero-Day nədir?</h2>
+    <p>"Zero-day" termini onu ifadə edir ki, istehsalçının bu boşluqdan xəbəri olmadığı üçün sistemin istifadəçiləri də hələ yamağı quraşdırmayıb — yəni hücumçu ilk günlərdə bu zəiflikdən maksimum fayda götürə bilər.</p>
+
+    <h2>Zero-Day Hücumlarının Mərhələləri</h2>
+    <ul>
+      <li>🔍 Boşluğun kəşfi (məsələn, SCADA sistemində təhlükəsizlik yoxlamaları zamanı)</li>
+      <li>🐍 Exploit hazırlanması</li>
+      <li>📥 Zərərli faylın sistemə yerləşdirilməsi (çox vaxt phishing ilə)</li>
+      <li>🔓 Sistemin idarəetməsinin ələ keçirilməsi və ya məlumat sızması</li>
+    </ul>
+
+    <h2>Kimlər Tərəfindən İstifadə Olunur?</h2>
+    <p>
+      Zero-day exploitlər aşağıdakı qurumlar tərəfindən istifadə edilə bilər:
+      <ul>
+        <li>🕵️‍♂️ Dövlət səviyyəli APT qrupları (Advanced Persistent Threats)</li>
+        <li>💰 Zərərli məqsədlə exploit satan qara bazar iştirakçıları</li>
+        <li>👨‍💻 Etik hackerlər (tapıb bildirirlər – "bug bounty")</li>
+      </ul>
+    </p>
+
+    <h2>Müdafiə Yolları</h2>
+    <ul>
+      <li>📦 Sistemlərin və tətbiqlərin daim yenilənməsi</li>
+      <li>🛡️ Davranış əsaslı antivirus və EDR (Endpoint Detection & Response)</li>
+      <li>🔐 Şəbəkə monitorinqi və anomalya aşkarlama sistemləri (IDS/IPS)</li>
+      <li>👨‍🏫 İstifadəçilərin maarifləndirilməsi – phishing risklərini anlamaq</li>
+    </ul>
+
+    <h2>Nümunə Ssenari: Zero-Day Hücumu</h2>
+    <p>🔧 <strong>Misal ssenari:</strong> Təsəvvür edin ki, bir SCADA sistemində istifadə olunan idarəetmə proqramında gizli bir zəiflik var. Bu boşluq istehsalçıya məlum deyil və antivirus proqramları onu tanımır.</p>
+    <p>👨‍💻 Hücumçu bu boşluğu exploit edərək, heç bir xəbərdarlıq olmadan sistemə daxil olur və operator konsolunu məsafədən idarə edir. Bu anda heç bir sistem siqnal vermir, çünki zəiflik tanınmamışdır.</p>
+    <p>🎯 Bu hücum zamanı klapanlar açılır, parametrlər dəyişir və nəticədə sistem sıradan çıxır — yəni tipik <strong>zero-day</strong> hücumu baş tutur.</p>
+
+    <p><strong>Nəticə:</strong> Zero-day hücumları qarşısı alınmamışsa, sistemə ciddi zərər verə bilər. Ən yaxşı müdafiə — proaktiv yanaşmadır: daim izləmə, təhlil və təhlükəsizlik mədəniyyəti.</p>
+
+    <a href="articles.html">← Geri qayıt</a>
+
+        <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </div>
+</body>
+</html>

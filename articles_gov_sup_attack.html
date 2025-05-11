@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 5 Dövlət Dəstəyi ilə Hücumlar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        color: #00ffc3;
+        font-size: 1.8rem;
+      }
+
+      .attack-box {
+        background-color: #1f1f1f;
+        border-left: 4px solid #00ffc3;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 255, 204, 0.05);
+      }
+
+      h2 {
+        color: #00e6b0;
+        margin-top: 2rem;
+      }
+
+      .attack-box p {
+        margin: 0.5rem 0;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="container">
+      <h1>Top 5 Dövlət Dəstəyi ilə Hücumlar</h1>
+      <p><strong>Tarix:</strong> 12 may 2025</p>
+      <p style="margin-bottom: 1.5rem;">
+        Dövlət tərəfindən dəstəklənən kiber hücumlar – çox vaxt “APT” (Advanced
+        Persistent Threat) adlandırılan – xüsusi məqsədlərlə həyata keçirilən və
+        ciddi təsir gücünə malik hücumlardır. Onlar təkcə texniki olaraq deyil,
+        həm də strateji olaraq hədəfi dəyişə bilər. Gəlin dünya miqyasında ən
+        çox tanınan 5 belə hücuma nəzər salaq:
+      </p>
+
+      <div class="attack-box">
+        <h2>1️⃣ Stuxnet (İran, 2010)</h2>
+        <p>
+          <strong>Məqsəd:</strong> İranın Natanz nüvə obyektindəki uran
+          zənginləşdirmə proqramını sabotaj etmək.
+        </p>
+        <p>
+          <strong>Necə oldu:</strong> Hücum USB vasitəsilə SCADA sistemlərinə
+          bulaşdırıldı. Virus SİEMENS PLC-lərinə daxil olaraq sentrifuqaları
+          qeyri-normal sürətlə fırlatdı və sıradan çıxartdı.
+        </p>
+        <p><strong>Tərəflər:</strong> ABŞ və İsrail (iddialar)</p>
+        <p>
+          <strong>Nəticə:</strong> İstehsal gecikdi və İranın nüvə proqramı
+          təxirə düşdü. Bu, kiber vasitə ilə fiziki ziyan verən ilk real hücum
+          hesab olunur.
+        </p>
+      </div>
+
+      <div class="attack-box">
+        <h2>2️⃣ NotPetya (Ukrayna, 2017)</h2>
+        <p>
+          <strong>Məqsəd:</strong> Ukrayna infrastrukturuna genişmiqyaslı zərər
+          vurmaq.
+        </p>
+        <p>
+          <strong>Necə oldu:</strong> Hücum M.E.Doc adlı maliyyə proqramına arxa
+          qapı yerləşdirilərək baş verdi. Virus "ransomware" kimi görünsə də,
+          real məqsədi sistemləri bərpaolunmaz hala gətirmək idi.
+        </p>
+        <p><strong>Tərəflər:</strong> Rusiya APT28 (iddialar)</p>
+        <p>
+          <strong>Nəticə:</strong> Yalnız Ukrayna deyil, Maersk, FedEx kimi
+          qlobal şirkətlər də zərər gördü. Ümumi iqtisadi ziyan milyardlarla
+          dollarla ölçüldü.
+        </p>
+      </div>
+
+      <div class="attack-box">
+        <h2>3️⃣ SolarWinds (ABŞ, 2020)</h2>
+        <p>
+          <strong>Məqsəd:</strong> ABŞ hökumət agentliklərində uzunmüddətli
+          casusluq həyata keçirmək.
+        </p>
+        <p>
+          <strong>Necə oldu:</strong> SolarWinds şirkətinin Orion adlı proqram
+          təminatına zərərli kod yerləşdirildi və yeniləmələrlə birlikdə
+          minlərlə təşkilata yayıldı.
+        </p>
+        <p><strong>Tərəflər:</strong> Rusiya APT29 (iddialar)</p>
+        <p>
+          <strong>Nəticə:</strong> Dövlət qurumları, təhlükəsizlik təşkilatları
+          və böyük şirkətlərin daxili məlumatları izlənildi. Təchizat zəncirinə
+          edilən bu hücum kiber casusluğun yeni səviyyəsi sayıldı.
+        </p>
+      </div>
+
+      <div class="attack-box">
+        <h2>4️⃣ WannaCry (Qlobal, 2017)</h2>
+        <p>
+          <strong>Məqsəd:</strong> Kritik sistemləri (xəstəxanalar, fabriklər və
+          s.) şifrləyərək fəaliyyətini dayandırmaq.
+        </p>
+        <p>
+          <strong>Necə oldu:</strong> Hücum Microsoft sistemlərindəki
+          "EternalBlue" boşluğundan istifadə edərək yayıldı. Hücumçular Bitcoin
+          qarşılığında faylların açılmasını vəd edirdilər.
+        </p>
+        <p>
+          <strong>Tərəflər:</strong> Şimali Koreya Lazarus qruplaşması
+          (iddialar)
+        </p>
+        <p>
+          <strong>Nəticə:</strong> İngiltərə Milli Səhiyyə Sistemi də daxil
+          olmaqla yüz minlərlə sistem sıradan çıxdı. Xəstəxanalar təxirə salındı
+          və xəstələr qəbul olunmadı.
+        </p>
+      </div>
+
+      <div class="attack-box">
+        <h2>5️⃣ Shamoon (Səudiyyə Ərəbistanı, 2012)</h2>
+        <p>
+          <strong>Məqsəd:</strong> Səudiyyə Ərəbistanının neft nəhəngi Aramco
+          şirkətinə ciddi itkilər vermək.
+        </p>
+        <p>
+          <strong>Necə oldu:</strong> Shamoon zərərli proqramı şirkətin daxili
+          şəbəkəsinə yerləşdirilərək 35,000 kompüterin yaddaşını sildi və bərpa
+          olunmaz hala gətirdi.
+        </p>
+        <p><strong>Tərəflər:</strong> İranla əlaqəli hücumçular (iddialar)</p>
+        <p>
+          <strong>Nəticə:</strong> Aramco-nun fəaliyyətində ciddi fasilələr
+          yarandı və neft sənayesində panika baş verdi.
+        </p>
+      </div>
+
+      <p><a href="articles.html">← Məqalələrə qayıt</a></p>
+
+      <script>
+        function toggleMenu() {
+          document.getElementById("navMenu").classList.toggle("active");
+        }
+      </script>
+    </div>
+  </body>
+</html>

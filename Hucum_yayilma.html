@@ -1,183 +1,196 @@
 <!DOCTYPE html>
 <html lang="az">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hücum Yayılma Qrafı    </title> <link rel="shortcut icon" href="./assets/imgs/shield_icon.png" type="image/x-icon">
 
-    <style>
-      body {
-        margin: 0;
-        background-color: #0f0f0f;
-        color: #e0e0e0;
-        font-family: "Segoe UI", sans-serif;
-      }
-      .info {
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 30px;
-      }
-      .info h1 {
-        margin: 0;
-        color: #00ffcc;
-        font-size: 1.8rem;
-      }
-      .graph-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 2rem;
-        max-width: 1200px;
-        margin: auto;
-        position: relative;
-      }
-      .node {
-        width: 25%;
-        background-color: #1e1e1e;
-        border: 2px solid #00ffcc;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-        cursor: pointer;
-        transition: background 0.3s, transform 0.2s;
-        font-weight: bold;
-      }
-      .node:hover {
-        background-color: #00ffcc22;
-        transform: scale(1.03);
-      }
-      .info-panel {
-        max-width: 900px;
-        background: #181818;
-        padding: 1.5rem;
-        margin: 2rem auto;
-        border-left: 4px solid #00ffcc;
-        border-radius: 8px;
-        min-height: 120px;
-      }
-      .info-panel h2 {
-        margin-top: 0;
-        color: #00ffcc;
-      }
-      .connector {
-        position: absolute;
-        height: 2px;
-        background-color: #00ffcc;
-        z-index: 0;
-      }
-    </style>
-   <link rel="stylesheet" href="./assets/nav.css">
-  </head>
-  <body>
-    <!-- haader start  -->
-    <header>
-      <nav class="navbar">
-        <div class="navbar-brand">
-           <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
-          <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <ul class="navbar-links" id="navMenu">
-          <li class="close-btn" onclick="toggleMenu()">✖</li>
-          <li><a href="./index.html">Ana Səhifə</a></li>
-          <li><a href="./articles.html">Məqalələr</a></li>
-          <li><a href="./quiz.html">Bilik Quizləri</a></li>
-          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
-          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
-          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
-          <li><a href="./kii-timeline.html">KII Zaman</a></li>
-          <li><a href="./terminler.html">Terminlər</a></li>
-          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- haader end  -->
-    <div class="info">
-      <h1>⚠️ Hücum Yayılma Qrafı (Advanced View)</h1>
-    </div class="info">
-    <main>
-      <div class="graph-container">
-        <div class="node" onclick="showDetails('entry')">
-          Giriş Nöqtəsi<br />
-          Phishing E-mail
-        </div>
-        <div class="node" onclick="showDetails('plc')">
-          PLC <br />
-          Proses Nəzarət
-        </div>
-        <div class="node" onclick="showDetails('operator')">
-          Operator PC<br />
-          İnsan Müdaxiləsi
-        </div>
-        <div class="node" onclick="showDetails('scada')">
-          SCADA Server<br />
-          Nəzarət Mərkəzi
-        </div>
-        <div class="node" onclick="showDetails('datacenter')">
-          Data Mərkəzi<br />
-          Məlumat Bazasına çıxış
-        </div>
-        <div class="node" onclick="showDetails('grid')">
-          Enerji Şəbəkəsi<br />
-          Təsir Bölgəsi
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hücum Yayılma Qrafı </title>
+  <link rel="shortcut icon" href="./assets/imgs/shield_icon.png" type="image/x-icon">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .info h1 {
+      margin: 0;
+      color: #00ffcc;
+      font-size: 1.8rem;
+    }
+
+    .graph-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    .node {
+      width: 40%;
+      background-color: #1e1e1e;
+      border: 2px solid #00ffcc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      font-weight: bold;
+    }
+
+    .node:hover {
+      background-color: #00ffcc22;
+      transform: scale(1.03);
+    }
+
+    .info-panel {
+      max-width: 900px;
+      background: #181818;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-left: 4px solid #00ffcc;
+      border-radius: 8px;
+      min-height: 120px;
+    }
+
+    .info-panel h2 {
+      margin-top: 0;
+      color: #00ffcc;
+    }
+
+    .connector {
+      position: absolute;
+      height: 2px;
+      background-color: #00ffcc;
+      z-index: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/nav.css">
+</head>
+
+<body>
+  <!-- haader start  -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="./index.html">
+          <h1>🛡️ CyberSec Blog</h1>
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-
-      <div class="info-panel" id="infoPanel">
-        <h2>Qraf məlumatları</h2>
-        <p id="infoText">
-          Qovşaqlardan birinə klik edərək hücumun necə yayıldığını öyrənin.
-        </p>
+      <ul class="navbar-links" id="navMenu">
+        <li class="close-btn" onclick="toggleMenu()">✖</li>
+        <li><a href="./index.html">Ana Səhifə</a></li>
+        <li><a href="./articles.html">Məqalələr</a></li>
+        <li><a href="./quiz.html">Bilik Quizləri</a></li>
+        <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+        <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+        <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+        <li><a href="./kii-timeline.html">KII Zaman</a></li>
+        <li><a href="./terminler.html">Terminlər</a></li>
+        <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- haader end  -->
+  <div class="info">
+    <h1>⚠️ Hücum Yayılma Qrafı</h1>
+  </div class="info">
+  <main>
+    <div class="graph-container">
+      <div class="node" onclick="showDetails('entry')">
+        Giriş Nöqtəsi<br />
+        Phishing E-mail
       </div>
-    </main>
+      <div class="node" onclick="showDetails('plc')">
+        PLC <br />
+        Proses Nəzarət
+      </div>
+      <div class="node" onclick="showDetails('operator')">
+        Operator PC<br />
+        İnsan Müdaxiləsi
+      </div>
+      <div class="node" onclick="showDetails('scada')">
+        SCADA Server<br />
+        Nəzarət Mərkəzi
+      </div>
+      <div class="node" onclick="showDetails('datacenter')">
+        Data Mərkəzi<br />
+        Məlumat Bazasına çıxış
+      </div>
+      <div class="node" onclick="showDetails('grid')">
+        Enerji Şəbəkəsi<br />
+        Təsir Bölgəsi
+      </div>
+    </div>
 
-    <script>
-      const nodeInfo = {
-        entry: {
-          title: "Phishing vasitəsilə giriş",
-          text: "İlk mərhələdə istifadəçiyə saxta e-poçt göndərilərək SCADA sisteminə daxil olmaq üçün arxa qapı yaradılır.",
-        },
-        plc: {
-          title: "PLC (Proqramlaşdırıla bilən logic kontroller)",
-          text: "SCADA ilə birbaşa əlaqədə olan qurğulara zərərli komanda göndərilərək əməliyyatlar pozulur.",
-        },
-        operator: {
-          title: "Operator kompüteri üzərindən nəzarət",
-          text: "Operator PC vasitəsilə qrafik interfeys ələ keçirilir. Monitorinq və əmr sistemi manipulyasiya olunur.",
-        },
-        scada: {
-          title: "SCADA serverin pozulması",
-          text: "Əsas nəzarət mərkəzi pozularaq bütün sənaye prosesləri şifrələnir və ya dəyişdirilir.",
-        },
-        datacenter: {
-          title: "Data Mərkəziyə keçid",
-          text: "Məlumat bazasına hücum edilərək sistem loqları silinir, izlər aradan qaldırılır.",
-        },
-        grid: {
-          title: "Enerji Şəbəkəsinə təsir",
-          text: "Son mərhələdə hücum elektrik şəbəkəsinin dayandırılmasına səbəb olur. Regional və ya ölkə üzrə təsir mümkündür.",
-        },
-      };
+    <div class="info-panel" id="infoPanel">
+      <h2>Qraf məlumatları</h2>
+      <p id="infoText">
+        Qovşaqlardan birinə klik edərək hücumun necə yayıldığını öyrənin.
+      </p>
+    </div>
+  </main>
 
-      function showDetails(key) {
-        const info = nodeInfo[key];
-        document.getElementById(
-          "infoPanel"
-        ).innerHTML = `<h2>${info.title}</h2><p>${info.text}</p>`;
-      }
-    </script>
-    <script>
-      function toggleMenu() {
-        document.getElementById("navMenu").classList.toggle("active");
-      }
-    </script>
-  </body>
+  <script>
+    const nodeInfo = {
+      entry: {
+        title: "Phishing vasitəsilə giriş",
+        text: "İlk mərhələdə istifadəçiyə saxta e-poçt göndərilərək SCADA sisteminə daxil olmaq üçün arxa qapı yaradılır.",
+      },
+      plc: {
+        title: "PLC (Proqramlaşdırıla bilən logic kontroller)",
+        text: "SCADA ilə birbaşa əlaqədə olan qurğulara zərərli komanda göndərilərək əməliyyatlar pozulur.",
+      },
+      operator: {
+        title: "Operator kompüteri üzərindən nəzarət",
+        text: "Operator PC vasitəsilə qrafik interfeys ələ keçirilir. Monitorinq və əmr sistemi manipulyasiya olunur.",
+      },
+      scada: {
+        title: "SCADA serverin pozulması",
+        text: "Əsas nəzarət mərkəzi pozularaq bütün sənaye prosesləri şifrələnir və ya dəyişdirilir.",
+      },
+      datacenter: {
+        title: "Data Mərkəziyə keçid",
+        text: "Məlumat bazasına hücum edilərək sistem loqları silinir, izlər aradan qaldırılır.",
+      },
+      grid: {
+        title: "Enerji Şəbəkəsinə təsir",
+        text: "Son mərhələdə hücum elektrik şəbəkəsinin dayandırılmasına səbəb olur. Regional və ya ölkə üzrə təsir mümkündür.",
+      },
+    };
+
+    function showDetails(key) {
+      const info = nodeInfo[key];
+      document.getElementById(
+        "infoPanel"
+      ).innerHTML = `<h2>${info.title}</h2><p>${info.text}</p>`;
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
+    }
+  </script>
+</body>
+
 </html>

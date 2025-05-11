@@ -7,6 +7,11 @@
   }
   a{
     text-decoration: none;
+    
+  }
+  a:visited{
+    color: #00ffcc;
+
   }
   body {
     font-family: 'Segoe UI', sans-serif;

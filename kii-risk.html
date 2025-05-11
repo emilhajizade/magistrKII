@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="./assets/kii-style.css" />
     <link rel="stylesheet" href="./assets/nav.css" />
   </head>
+
   <body>
     <!-- haader start  -->
     <header>
       <nav class="navbar">
         <div class="navbar-brand">
-          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <a href="./index.html">
+            <h1>🛡️ CyberSec Blog</h1>
+          </a>
           <div class="menu-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -46,7 +49,7 @@
       <form id="riskForm">
         <div class="question-block">
           <p><strong>1. Sisteminizdə firewall aktivdirmi?</strong></p>
-          <label><input type="radio" name="q1" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q1" value="yes" /> Bəli</label>
           <label><input type="radio" name="q1" value="no" /> Xeyr</label>
         </div>
 
@@ -57,7 +60,7 @@
               aparılırmı?</strong
             >
           </p>
-          <label><input type="radio" name="q2" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q2" value="yes" /> Bəli</label>
           <label><input type="radio" name="q2" value="no" /> Xeyr</label>
         </div>
 
@@ -68,7 +71,7 @@
               olunurmu?</strong
             >
           </p>
-          <label><input type="radio" name="q3" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q3" value="yes" /> Bəli</label>
           <label><input type="radio" name="q3" value="no" /> Xeyr</label>
         </div>
 
@@ -79,8 +82,41 @@
               mövcuddurmu?</strong
             >
           </p>
-          <label><input type="radio" name="q4" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q4" value="yes" /> Bəli</label>
           <label><input type="radio" name="q4" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong>5. SCADA sistemlərində audit loqları saxlanılırmı?</strong>
+          </p>
+          <label><input type="radio" name="q5" value="yes" /> Bəli</label>
+          <label><input type="radio" name="q5" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong>6. Fiziki girişə nəzarət sistemləri mövcuddurmu?</strong>
+          </p>
+          <label><input type="radio" name="q6" value="yes" /> Bəli</label>
+          <label><input type="radio" name="q6" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p><strong>7. Təchizat zənciri üzrə risklər izlənilirmi?</strong></p>
+          <label><input type="radio" name="q7" value="yes" /> Bəli</label>
+          <label><input type="radio" name="q7" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong
+              >8. Sistemlərə daxil olan istifadəçilər
+              məhdudlaşdırılıbmı?</strong
+            >
+          </p>
+          <label><input type="radio" name="q8" value="yes" /> Bəli</label>
+          <label><input type="radio" name="q8" value="no" /> Xeyr</label>
         </div>
 
         <button type="button" onclick="checkRisk()">
@@ -97,7 +133,7 @@
         const result = document.getElementById("riskResult");
 
         let score = 0;
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 8; i++) {
           const answer = form.querySelector(`input[name="q${i}"]:checked`);
           if (answer && answer.value === "yes") {
             score++;
@@ -105,11 +141,11 @@
         }
 
         let level = "";
-        if (score === 4) level = "🔐 Yüksək Təhlükəsizlik";
-        else if (score >= 2) level = "🟡 Orta Təhlükəsizlik";
+        if (score === 8) level = "🔐 Yüksək Təhlükəsizlik";
+        else if (score >= 5) level = "🟡 Orta Təhlükəsizlik";
         else level = "🔴 Aşağı Təhlükəsizlik";
 
-        result.innerHTML = `<p class="risk-level">${level}</p>`;
+        result.innerHTML = `<p class="risk-level">${level} </p>`;
       }
     </script>
     <script>

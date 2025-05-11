@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kİİ Sistemləri üçün Təhlükə Modelləri</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      color: #00ffc3;
+    }
+
+    h2 {
+      color: #00e6b0;
+      margin-top: 2rem;
+    }
+
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .box {
+      background: #1f1f1f;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #00ffc3;
+      border-radius: 5px;
+    }
+  </style>
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+  <div class="container">
+    <h1>Kİİ Sistemləri üçün Təhlükə Modelləri</h1>
+    <p><strong>Tarix:</strong> 5 may 2025</p>
+
+    <p>Kritik informasiya infrastrukturları (Kİİ) — enerji, su, nəqliyyat kimi sahələrdə fəaliyyət göstərən vacib sistemlərdir. Bu sistemlərin sıradan çıxması böyük problemlərə yol aça bilər. Bu səbəbdən Kİİ-lərdəki risklərin düzgün qiymətləndirilməsi üçün xüsusi modellərdən istifadə olunur.</p>
+
+    <h2>1️⃣ Fuzzy Logic (Bulanıq Məntiq)</h2>
+    <p>Ənənəvi yanaşmalarda hər şey ya “bəli” ya “xeyr” kimi dəyərləndirilir. Amma real həyatda risklər bu qədər dəqiq olmur. Məsələn: “Bu risk yüksəkdirmi?” → “Bəlkə də orta-yüksəkdir...”</p>
+    <p><strong>Bulanıq məntiq</strong> bu kimi qeyri-dəqiq məlumatlarla işləməyə imkan verir. Risklər “aşağı”, “orta”, “yüksək” kimi şərti sözlərlə qiymətləndirilir və sistem onları ədədlərə çevirərək nəticə çıxarır.</p>
+
+    <div class="box">
+      <strong>Ssenari:</strong> Enerji stansiyasında transformator çox qızır. Hava da istidir. Bu halda risk “orta-yüksək” kimi qiymətləndirilir. Sistem 0.7 dəyərini çıxarır və qərar verir ki, soyutma tədbiri görülməlidir.
+    </div>
+
+    <h2>2️⃣ Bayes Yanaşması</h2>
+    <p>Bu metod əvvəlki məlumatlara əsaslanaraq riskin ehtimalını hesablayır və yeni məlumat gəldikcə bu ehtimalı yeniləyir. Yəni: <em>əvvəlcə inanırsan, sonra faktlarla inancını düzəldirsən.</em></p>
+
+    <div class="box">
+      <strong>Ssenari:</strong> SCADA sistemində nasazlıq ehtimalı əvvəlcə 5% idi. Sonra fırtına xəbərdarlığı gəlir – ehtimal 20%-ə qalxır. Daha sonra bəzi sensorlar işləmədikdə – ehtimal 60%-ə yüksəlir. Sistem rəhbərliyi tədbir görmək üçün xəbərdar edilir.
+    </div>
+
+    <h2>3️⃣ AHP (Analitik Hiyerarxiya Prosesi)</h2>
+    <p>AHP ilə müxtəlif seçimlər və kriteriyalar əsasında qərar verilir. Məsələn: Hansı təhlükəsizlik tədbirinə daha çox büdcə ayrılsın? Sistem kriteriyaları müqayisə edir (xərc, fayda, sürət və s.) və ən optimal variantı seçir.</p>
+
+    <div class="box">
+      <strong>Ssenari:</strong> Rəhbərlikdə üç qərar var: (1) Firewall almaq, (2) köhnə cihazları dəyişmək, (3) təlim keçmək. AHP deyir ki, büdcə azdırsa və tez tədbir görmək lazımdırsa, ən uyğun variant təlimdir.
+    </div>
+
+    <h2>📌 Nəticə</h2>
+    <p>Enerji kimi kritik sahələrdə risklərə qarşı tədbir görmək üçün bu cür modellər vacibdir. Hər biri fərqli məqsədlə istifadə olunur və bir yerdə daha güclü nəticə verir:</p>
+    <ul>
+      <li>🧠 Fuzzy Logic – qeyri-dəqiq riskləri təhlil edir</li>
+      <li>📊 Bayes – məlumat gəldikcə ehtimalı dəyişir</li>
+      <li>⚖️ AHP – ən uyğun qərarı seçməyə kömək edir</li>
+    </ul>
+
+    <p><a href="articles.html">← Məqalələrə qayıt</a></p>
+        <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </div>
+</body>
+</html>
