@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilik Quizi</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/quiz-style.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="quiz-container fade-in">
+      <h1>🧠 Kiber Bilik Qvizi</h1>
+
+      <form id="quizForm">
+        <div class="question-block">
+          <p><strong>1. Phishing hücumu nədir?</strong></p>
+          <label
+            ><input type="radio" name="q1" value="a" /> Fiziki hücumdur</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="b" /> Saxta e-mail və
+            linklərlə məlumat oğurluğu</label
+          ><br />
+          <label
+            ><input type="radio" name="q1" value="c" /> Serverə fiziki giriş
+            cəhdi</label
+          >
+        </div>
+
+        <div class="question-block">
+          <p><strong>2. VPN nə üçün istifadə olunur?</strong></p>
+          <label
+            ><input type="radio" name="q2" value="a" /> Virusları silmək
+            üçün</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="b" /> Brauzer sürətləndirmək
+            üçün</label
+          ><br />
+          <label
+            ><input type="radio" name="q2" value="c" /> Şəxsi məlumatları
+            qoruyaraq internetə daxil olmaq üçün</label
+          >
+        </div>
+
+        <div class="question-block">
+          <p><strong>3. Zero-day boşluğu nədir?</strong></p>
+          <label
+            ><input type="radio" name="q3" value="a" /> Artıq bağlanmış sistem
+            boşluğudur</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="b" /> İstifadəçiyə aid
+            şifrədir</label
+          ><br />
+          <label
+            ><input type="radio" name="q3" value="c" /> Əvvəlcədən aşkarlanmayıb
+            və hələ bağlanmamış boşluq</label
+          >
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Nəticəni Göstər</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      function checkQuiz() {
+        const answers = {
+          q1: "b",
+          q2: "c",
+          q3: "c",
+        };
+
+        let score = 0;
+        const form = document.getElementById("quizForm");
+        const result = document.getElementById("result");
+
+        for (let q in answers) {
+          const selected = form.querySelector(`input[name="${q}"]:checked`);
+          if (selected && selected.value === answers[q]) {
+            score++;
+          }
+        }
+
+        result.innerHTML = `<p>Sizin nəticəniz: <strong>${score}/3</strong></p>`;
+      }
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

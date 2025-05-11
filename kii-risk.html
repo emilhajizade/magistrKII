@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kİİ Risk Yoxlaması</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/kii-style.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="quiz-container fade-in">
+      <h1>🛡️ Kİİ Risk Yoxlaması</h1>
+
+      <form id="riskForm">
+        <div class="question-block">
+          <p><strong>1. Sisteminizdə firewall aktivdirmi?</strong></p>
+          <label><input type="radio" name="q1" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q1" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong
+              >2. Sistemlərdə müntəzəm ehtiyat nüsxəsi (backup)
+              aparılırmı?</strong
+            >
+          </p>
+          <label><input type="radio" name="q2" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q2" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong
+              >3. Antivirus və təhlükə aşkarlama sistemi istifadə
+              olunurmu?</strong
+            >
+          </p>
+          <label><input type="radio" name="q3" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q3" value="no" /> Xeyr</label>
+        </div>
+
+        <div class="question-block">
+          <p>
+            <strong
+              >4. İstifadəçilər üçün iki faktorlu identifikasiya
+              mövcuddurmu?</strong
+            >
+          </p>
+          <label><input type="radio" name="q4" value="yes" /> Bəli</label><br />
+          <label><input type="radio" name="q4" value="no" /> Xeyr</label>
+        </div>
+
+        <button type="button" onclick="checkRisk()">
+          Risk Səviyyəsini Göstər
+        </button>
+      </form>
+
+      <div id="riskResult"></div>
+    </div>
+
+    <script>
+      function checkRisk() {
+        const form = document.getElementById("riskForm");
+        const result = document.getElementById("riskResult");
+
+        let score = 0;
+        for (let i = 1; i <= 4; i++) {
+          const answer = form.querySelector(`input[name="q${i}"]:checked`);
+          if (answer && answer.value === "yes") {
+            score++;
+          }
+        }
+
+        let level = "";
+        if (score === 4) level = "🔐 Yüksək Təhlükəsizlik";
+        else if (score >= 2) level = "🟡 Orta Təhlükəsizlik";
+        else level = "🔴 Aşağı Təhlükəsizlik";
+
+        result.innerHTML = `<p class="risk-level">${level}</p>`;
+      }
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

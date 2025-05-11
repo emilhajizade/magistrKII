@@ -1,0 +1,88 @@
+/* Əsas Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+
+
+.subtitle {
+  font-size: 1rem;
+  color: #aaaaaa;
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Navigasiya */
+.sector-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.sector-nav .active {
+  background: #00ffcc;
+  border: 1px solid #00ffcc;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.sector-nav button {
+  background: #1a1a1a;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.sector-nav button:hover {
+  background: #00ffcc22;
+}
+
+/* Kartlar */
+.card {
+  background: #181818;
+  border-left: 4px solid #00ffcc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 8px #00ffcc11;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #00ffcc;
+}
+
+.card ul {
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+}

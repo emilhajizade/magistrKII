@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSec Blog </title> <link rel="shortcut icon" href="./assets/imgs/shield_icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+
+    <main>
+      <section class="hero fade-in">
+        <h2>Kibertəhlükəsizlik dünyasına xoş gəldiniz!</h2>
+        <p>
+          Burada Kİİ, hücum senariləri və təhlükə modelləri haqqında bloqlar
+          tapacaqsınız.
+        </p>
+        <p class="intro-text fade-in">
+          Bu platforma kibertəhlükəsizlik sahəsində məlumatlandırma məqsədi ilə
+          yaradılıb. Burada siz dövlətlər üçün həyati əhəmiyyət daşıyan kritik
+          infrastruktur sahələri, real hücum nümunələri və şəxsi təhlükəsizlik
+          üçün vacib tövsiyələrlə tanış olacaqsınız.
+        </p>
+      </section>
+
+      <section class="blog-posts fade-in">
+        <article class="post">
+          <h2>Zero-Day Vulnerability nədir?</h2>
+          <p>
+            Zero-day proqramdakı bilinməyən boşluqlardır ki, hücumçular onları
+            sistem patch olunmadan əvvəl istifadə edir...
+          </p>
+          <a href="./articles.html">Daha çox oxu →</a>
+        </article>
+
+        <article class="post">
+          <h2>Top 5 Dövlət Dəstəyi ilə Hücumlar</h2>
+          <p>
+            Stuxnet, SolarWinds və digər böyük Kİİ hücumlarını incələyirik...
+          </p>
+          <a href="./articles.html">Daha çox oxu →</a>
+        </article>
+      </section>
+      <section class="sectors-section fade-in">
+        <h2>Kritik İnfrastruktur Sektorları</h2>
+        <div class="sectors-grid">
+          <div class="sector-card">⚡ Enerji</div>
+          <div class="sector-card">💧 Su Təchizatı</div>
+          <div class="sector-card">🏥 Səhiyyə</div>
+          <div class="sector-card">🚇 Nəqliyyat</div>
+        </div>
+      </section>
+      <section class="tips-section fade-in">
+        <h2>Təhlükəsizlik Tövsiyələri</h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <h3>Şəxsi Təhlükəsizlik</h3>
+            <ul>
+              <li>İki faktorlu identifikasiya aktiv edin</li>
+              <li>Şübhəli linklərə klik etməyin</li>
+              <li>Güclü və unikal şifrələr istifadə edin</li>
+            </ul>
+          </div>
+          <div class="tip-card">
+            <h3>Təşkilati Təhlükəsizlik</h3>
+            <ul>
+              <li>Daimi məlumat ehtiyat nüsxələri alın</li>
+              <li>İT heyəti üçün kiber təlimlər təşkil edin</li>
+              <li>Firewall və antivirusları aktual saxlayın</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fade-in">
+      <p>© 2025 CyberSec Blog. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

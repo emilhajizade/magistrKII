@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kibertəhlükəsizlik Terminləri</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/terminler.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="terms-container fade-in">
+      <h1>📘 Kibertəhlükəsizlik Terminləri</h1>
+      <p class="intro">
+        Texniki olmayan istifadəçilər üçün əsas anlayışlar izah olunur:
+      </p>
+
+      <dl class="dictionary">
+        <dt>🔐 Firewall</dt>
+        <dd>
+          Şəbəkəyə daxil olan və çıxan trafiki nəzarətdə saxlayan təhlükəsizlik
+          divarıdır. Arzuolunmaz girişləri bloklayır.
+        </dd>
+
+        <dt>💾 Backup</dt>
+        <dd>
+          Faylların ehtiyat nüsxəsini saxlamaq üçün yaradılan surətdir. Sistem
+          pozulduqda geri bərpa üçün istifadə olunur.
+        </dd>
+
+        <dt>🧬 Malware</dt>
+        <dd>
+          “Zərərli proqram” mənasını verir. Kompüterə və ya şəbəkəyə zərər
+          vermək üçün hazırlanmış proqramlardır (virus, trojan və s.).
+        </dd>
+
+        <dt>📥 Phishing</dt>
+        <dd>
+          İnsanları aldatmaq üçün göndərilən saxta e-maillərlə şəxsi məlumatları
+          oğurlamaq üsuludur.
+        </dd>
+
+        <dt>🔒 Şifrə Meneceri</dt>
+        <dd>
+          Çoxsaylı şifrələri yadda saxlamaq və təhlükəsiz saxlamaq üçün istifadə
+          olunan tətbiqdir.
+        </dd>
+
+        <dt>🖥️ SCADA</dt>
+        <dd>
+          “Supervisory Control and Data Acquisition” sistemidir. Sənaye və
+          enerji müəssisələrində avtomatik nəzarət üçün istifadə olunur.
+        </dd>
+
+        <dt>🌐 VPN</dt>
+        <dd>
+          İnternetdə təhlükəsiz və gizli sörfinq etməyə imkan verən virtual
+          əlaqə texnologiyasıdır.
+        </dd>
+
+        <dt>🛡️ 2FA (İki faktorlu identifikasiya)</dt>
+        <dd>
+          Hesabınıza daxil olmaq üçün şifrə ilə yanaşı əlavə təsdiq (məsələn,
+          SMS kodu) tələb edən təhlükəsizlik tədbiri.
+        </dd>
+
+        <dt>📊 Ransomware</dt>
+        <dd>
+          Faylları şifrələyən və onların açılması üçün pul tələb edən zərərli
+          proqram növü.
+        </dd>
+      </dl>
+    </div>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

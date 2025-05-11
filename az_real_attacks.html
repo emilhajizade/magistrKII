@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azərbaycan üzrə Kİİ Hücum Tarixi    </title> <link rel="shortcut icon" href="./assets/imgs/shield_icon.png" type="image/x-icon">
+
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .info {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid #00ffcc44;
+    }
+    .info h1 {
+      margin: 0;
+      color: #00ffcc;
+      font-size: 1.8rem;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .incident {
+      background-color: #181818;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #00ffcc;
+      border-radius: 6px;
+    }
+    .incident h2 {
+      color: #00ffcc;
+      margin-top: 0;
+    }
+    .incident time {
+      display: block;
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+    .incident p {
+      line-height: 1.6;
+    }
+    .tag {
+      display: inline-block;
+      background: #00ffcc22;
+      color: #00ffcc;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      margin-right: 0.5rem;
+      border-radius: 4px;
+    }
+    .source {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin-top: 1rem;
+    }
+  </style>
+   <link rel="stylesheet" href="./assets/nav.css">
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+           <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+  <div class="info">
+    <h1>🇦🇿 Azərbaycan üzrə Real Hücumlar və İnfotexnika Konteksti</h1>
+  </div class="info">
+
+  <div class="content">
+
+    <div class="incident">
+      <h2>Milli CERT xəbərdarlığı: Enerji Sektorunda Potensial DDoS Riski</h2>
+      <time>2023-05-12</time>
+      <div class="tag">Enerji</div><div class="tag">DDoS</div><div class="tag">İnfotexnika Analizi</div>
+      <p>2023-cü ilin may ayında Milli CERT tərəfindən elektrik paylama operatorlarına kütləvi DDoS hücumları ilə bağlı xəbərdarlıq göndərildi. Şəbəkə analizi nəticəsində, hücumların əsasən regional DNS və SCADA bağlantılarına təsir etməsi müşahidə olundu. Hücumların məqsədi xidmətin dayandırılması və reputasiya pozuntusu kimi qiymətləndirildi.</p>
+      <div class="source">Mənbə: <a href="https://cert.gov.az" target="_blank">cert.gov.az</a></div>
+    </div>
+
+    <div class="incident">
+      <h2>2022: Xocavənd Telekom Hücum Cəhdi</h2>
+      <time>2022-11-03</time>
+      <div class="tag">Telekom</div><div class="tag">APT</div><div class="tag">Məlumat Sızması</div>
+      <p>2022-ci ilin noyabrında qeyri-qanuni aktorlar tərəfindən Xocavənd Telekom sistemlərinə daxil olmaq üçün arxa qapı (backdoor) proqram təminatından istifadə edilib. İzləmə sistemləri 14 dəqiqə gecikmə ilə reaksiya verdi. Məlumatlar SIEM vasitəsilə təhlil edilərək, hücumun xarici IP bloklarından qaynaqlandığı müəyyən olundu.</p>
+      <div class="source">Mənbə: Daxili Telekom monitorinq hesabatı, 2022 (konfidensial mənbə)</div>
+    </div>
+
+    <div class="incident">
+      <h2>2021: Rəqəmsal Bank Tətbiqlərinə Kiber Sabotaj</h2>
+      <time>2021-06-20</time>
+      <div class="tag">Maliyyə</div><div class="tag">Phishing</div><div class="tag">Mobil Tətbiq</div>
+      <p>İstifadəçilərə rəsmi görünüşlü bank tətbiqlərinin saxta versiyaları link vasitəsilə göndərilərək, onların login məlumatları ələ keçirilib. Təhlil nəticəsində məlum olub ki, istifadə olunan phishing səhifələri real domenlərə çox bənzər şəkildə tərtib edilib.</p>
+      <div class="source">Mənbə: Azərbaycan KİV, bank sektor təhlükəsizlik hesabatı (2021)</div>
+    </div>
+
+    <div class="incident">
+      <h2>COVID-19 dövründə Səhiyyə Sisteminə Ransomware Təsiri</h2>
+      <time>2020-10-10</time>
+      <div class="tag">Səhiyyə</div><div class="tag">Ransomware</div><div class="tag">SCADA bağlantısı</div>
+      <p>2020-ci ilin pandemiya dövründə səhiyyə məlumat sistemlərinin bəzilərinə ransomware hücumu qeydə alınıb. Klinikaların məlumat bazaları 24 saatlıq dövrdə əlçatmaz vəziyyətə düşüb. Hadisədən sonra Ehtiyat Nüsxə Strategiyasının təkmilləşdirilməsinə qərar verilib.</p>
+      <div class="source">Mənbə: Səhiyyə Nazirliyinin daxili hesabatı, 2020</div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCADA Hücum Simulyasiyası</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/kii-simulyasiya-inkisaf.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="sim-container fade-in">
+      <h1>🧨 Kİİ Hücum Simulyasiyası</h1>
+
+      <label for="scenario">Ssenari seçin:</label>
+      <select id="scenario">
+        <option value="ransomware">SCADA Ransomware</option>
+        <option value="ddos">Enerji DDoS Hücumu</option>
+        <option value="phishing">Operator Phishing</option>
+        <option value="insider">Daxili Təhdid</option>
+        <option value="usbMalware">USB ilə Yoluxma</option>
+      </select>
+
+      <button onclick="startSimulation()">🔁 Simulyasiyaya Başla</button>
+
+      <div class="scada-graphic">
+        <p class="scada-title">🔌 SCADA Vizualizasiyası</p>
+        <div class="scada-box power">Power Station</div>
+        <div class="scada-box plc">PLC</div>
+        <div class="scada-box server">SCADA Server</div>
+        <div class="scada-box operator">Operator Console</div>
+      </div>
+
+      <div id="simulationLog" class="log"></div>
+
+      <div id="responseChoice" style="display: none">
+        <p>🚨 Siz sistem administratorusunuz. Necə reaksiya verirsiniz?</p>
+        <div id="dynamicOptions"></div>
+      </div>
+
+      <div id="finalResult"></div>
+    </div>
+
+    <script src="./assets/js/scenarios.js"></script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

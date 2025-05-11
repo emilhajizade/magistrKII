@@ -1,0 +1,132 @@
+
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 1.2s ease-in forwards;
+    opacity: 0;
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Header & Nav */
+ 
+/* ==== NAVBAR ==== */
+
+  
+  /* Hero Section */
+  .intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: #aaaaaa;
+    font-size: 1.1rem;
+  }
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #1e1e1e, #171717);
+    margin-bottom: 2rem;
+  }
+  .hero h2 {
+    color: #00ffcc;
+    margin-bottom: 1rem;
+  }
+  
+  /* Blog Posts */
+  main {
+    padding: 2rem;
+  }
+  .blog-posts {
+    display: grid;
+    gap: 2rem;
+  }
+  .post {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-left: 4px solid #00ffcc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .post:hover {
+    transform: scale(1.02);
+  }
+  .post h2 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  .post p {
+    margin-bottom: 0.8rem;
+    color: #cccccc;
+  }
+  .post a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .sectors-section {
+    margin-top: 3rem;
+  }
+  .sectors-section h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-bottom: 1.5rem;
+  }
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  .sector-card {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-left: 4px solid #00ffcc;
+    transition: transform 0.3s ease;
+  }
+  .sector-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+  }
+  .tips-section {
+    margin-top: 3rem;
+  }
+  .tips-section h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-bottom: 1.5rem;
+  }
+  .tips-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .tip-card {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #00ffcc;
+  }
+  .tip-card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  .tip-card ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    color: #cccccc;
+  }
+    
+  /* Footer */
+  footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  

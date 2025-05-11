@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Məqalələr</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/articles-style.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+
+    <div class="articles-container fade-in">
+      <h1>📚 Kibertəhlükəsizlik Məqalələri</h1>
+
+      <div class="article-card">
+        <h2>Zero-Day Hücumlar: Gözlənilməz Risk</h2>
+        <p class="date">Tarix: 10 may 2025</p>
+        <p>
+          Zero-day boşluqları proqram təminatındakı hələ istehsalçıya məlum
+          olmayan boşluqlardır. Bu hücumlar real təhlükə yaradır...
+        </p>
+        <a href="#">Daha çox oxu →</a>
+      </div>
+
+      <div class="article-card">
+        <h2>Kİİ Sistemləri üçün Təhlükə Modelləri</h2>
+        <p class="date">Tarix: 5 may 2025</p>
+        <p>
+          Enerji, su, səhiyyə kimi sektorların qorunması üçün fuzzy, bayes və
+          multi-kriteriya modelləri istifadə olunur. Gəlin baxaq necə...
+        </p>
+        <a href="#">Daha çox oxu →</a>
+      </div>
+
+      <div class="article-card">
+        <h2>Phishing Hücumlarından Necə Qorunmalı?</h2>
+        <p class="date">Tarix: 25 aprel 2025</p>
+        <p>
+          Phishing e-maillərlə istifadəçilərin məlumatlarını oğurlamaq üçün ən
+          geniş yayılmış üsullardandır. Ən yaxşı müdafiə yollarını təqdim
+          edirik...
+        </p>
+        <a href="#">Daha çox oxu →</a>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

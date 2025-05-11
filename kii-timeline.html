@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kİİ Hadisələri - Timeline</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/kii-timeline.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="timeline-container fade-in">
+      <h1>📅 Kİİ Hücumları - Xronoloji Baxış</h1>
+
+      <div class="timeline">
+        <div class="event">
+          <div class="date">2010</div>
+          <div class="content">
+            <h3>Stuxnet Hücumu</h3>
+            <p>
+              İranın nüvə SCADA sisteminə qarşı yaradılmış ilk sənaye yönümlü
+              virus. Real fiziki zərərə səbəb oldu.
+            </p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="date">2015</div>
+          <div class="content">
+            <h3>Ukrayna Elektrik Kəsintisi</h3>
+            <p>
+              BlackEnergy malware ilə elektrik SCADA sistemləri çökdürüldü.
+              230,000 insan işıqsız qaldı.
+            </p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="date">2017</div>
+          <div class="content">
+            <h3>NotPetya Hücumu</h3>
+            <p>
+              Ukraynadakı maliyyə və enerji sektorlarına yayılan ransomware.
+              Qlobal ziyan: $10 milyard.
+            </p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="date">2021</div>
+          <div class="content">
+            <h3>Colonial Pipeline Hücumu</h3>
+            <p>
+              ABŞ-da neft boru xətti ransomware hücumu nəticəsində bağlandı.
+              Yanacaq çatışmazlığına səbəb oldu.
+            </p>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="date">2023</div>
+          <div class="content">
+            <h3>Las Vegas Su Stansiyasına Hibrid Hücum</h3>
+            <p>
+              Operator phishing + SCADA bağlantısı pozularaq su təchizatına
+              müdaxilə edildi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

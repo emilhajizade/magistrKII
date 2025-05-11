@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kritik İnfrastruktur Təhlükəsizlik</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/kii-category.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html"><h1>🛡️ CyberSec Blog</h1></a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">KII Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <main class="container">
+      <nav class="sector-nav">
+        <button onclick="filterSector('all')">Hamısı</button>
+        <button onclick="filterSector('enerji')">Enerji</button>
+        <button onclick="filterSector('su')">Su</button>
+        <button onclick="filterSector('sehhiyye')">Səhiyyə</button>
+        <button onclick="filterSector('telekom')">Telekom</button>
+        <button onclick="filterSector('neqliyyat')">Nəqliyyat</button>
+        <button onclick="filterSector('hokumet')">Hökumət</button>
+        <button onclick="filterSector('malİyye')">Maliyyə</button>
+      </nav>
+
+      <div id="infrastructure-list">
+        <!-- Buraya dinamik olaraq obyektlər əlavə olunacaq -->
+      </div>
+    </main>
+
+    <!-- <footer>
+      <p>&copy; 2025 Kritik İnfrastruktur Təhlükəsizlik Layihəsi</p>
+    </footer> -->
+
+    <script src="./assets/js/kii-category.js"></script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
