@@ -1,127 +1,179 @@
 <!DOCTYPE html>
 <html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilik Quizi</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/shield_icon.png"
+      type="image/x-icon"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bilik Quizi</title>
-  <link rel="shortcut icon" href="./assets/imgs/shield_icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/quiz-style.css" />
+    <link rel="stylesheet" href="./assets/nav.css" />
+  </head>
 
-  <link rel="stylesheet" href="./assets/quiz-style.css" />
-  <link rel="stylesheet" href="./assets/nav.css" />
-</head>
-
-<body>
-  <!-- haader start  -->
-  <header>
-    <nav class="navbar">
-      <div class="navbar-brand">
-        <a href="./index.html">
-          <h1>🛡️ CyberSec Blog</h1>
-        </a>
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+  <body>
+    <!-- haader start  -->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="./index.html">
+            <h1>🛡️ CyberSec Blog</h1>
+          </a>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-      </div>
-      <ul class="navbar-links" id="navMenu">
-        <li class="close-btn" onclick="toggleMenu()">✖</li>
-        <li><a href="./index.html">Ana Səhifə</a></li>
-        <li><a href="./articles.html">Məqalələr</a></li>
-        <li><a href="./quiz.html">Bilik Quizləri</a></li>
-        <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
-        <li><a href="./kii-category.html">Aze Kİİ Tesnifati</a></li>
-        <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
-        <li><a href="./kii-timeline.html">KII Zaman</a></li>
-        <li><a href="./terminler.html">Terminlər</a></li>
-        <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- haader end  -->
-  <div class="quiz-container fade-in">
-    <h1>🧠 Kiber Bilik Quizi</h1>
+        <ul class="navbar-links" id="navMenu">
+          <li class="close-btn" onclick="toggleMenu()">✖</li>
+          <li><a href="./index.html">Ana Səhifə</a></li>
+          <li><a href="./articles.html">Məqalələr</a></li>
+          <li><a href="./quiz.html">Bilik Quizləri</a></li>
+          <li><a href="./kii-risk.html">Kİİ Risk Yoxlaması</a></li>
+          <li><a href="./kii-category.html">Aze Kİİ Təsnifati</a></li>
+          <li><a href="./Hucum_yayilma.html">Hücum Yayılma Qrafı</a></li>
+          <li><a href="./kii-timeline.html">Kİİ Zaman</a></li>
+          <li><a href="./terminler.html">Terminlər</a></li>
+          <li><a href="./2kii-simulasya-inki.html">Simulyasiya</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- haader end  -->
+    <div class="quiz-container fade-in">
+      <h1>🧠 Kiber Bilik Quizi</h1>
 
-    <form id="quizForm">
-  <div class="question-block">
-    <p><strong>1. Phishing hücumu nədir?</strong></p>
-    <label><input type="radio" name="q1" value="a" /> Fiziki hücumdur</label>
-    <label><input type="radio" name="q1" value="b" /> Saxta e-mail və linklərlə məlumat oğurluğu</label>
-    <label><input type="radio" name="q1" value="c" /> Serverə fiziki giriş cəhdi</label>
-  </div>
+      <form id="quizForm">
+        <div class="question-block">
+          <p><strong>1. Phishing hücumu nədir?</strong></p>
+          <label
+            ><input type="radio" name="q1" value="a" /> Fiziki hücumdur</label
+          >
+          <label
+            ><input type="radio" name="q1" value="b" /> Saxta e-mail və
+            linklərlə məlumat oğurluğu</label
+          >
+          <label
+            ><input type="radio" name="q1" value="c" /> Serverə fiziki giriş
+            cəhdi</label
+          >
+        </div>
 
-  <div class="question-block">
-    <p><strong>2. VPN nə üçün istifadə olunur?</strong></p>
-    <label><input type="radio" name="q2" value="a" /> Virusları silmək üçün</label>
-    <label><input type="radio" name="q2" value="b" /> Brauzer sürətləndirmək üçün</label>
-    <label><input type="radio" name="q2" value="c" /> Şəxsi məlumatları qoruyaraq internetə daxil olmaq üçün</label>
-  </div>
+        <div class="question-block">
+          <p><strong>2. VPN nə üçün istifadə olunur?</strong></p>
+          <label
+            ><input type="radio" name="q2" value="a" /> Virusları silmək
+            üçün</label
+          >
+          <label
+            ><input type="radio" name="q2" value="b" /> Brauzer sürətləndirmək
+            üçün</label
+          >
+          <label
+            ><input type="radio" name="q2" value="c" /> Şəxsi məlumatları
+            qoruyaraq internetə daxil olmaq üçün</label
+          >
+        </div>
 
-  <div class="question-block">
-    <p><strong>3. Zero-day boşluğu nədir?</strong></p>
-    <label><input type="radio" name="q3" value="a" /> Artıq bağlanmış sistem boşluğudur</label>
-    <label><input type="radio" name="q3" value="b" /> İstifadəçiyə aid şifrədir</label>
-    <label><input type="radio" name="q3" value="c" /> Əvvəlcədən aşkarlanmayıb və hələ bağlanmamış boşluq</label>
-  </div>
+        <div class="question-block">
+          <p><strong>3. Zero-day boşluğu nədir?</strong></p>
+          <label
+            ><input type="radio" name="q3" value="a" /> Artıq bağlanmış sistem
+            boşluğudur</label
+          >
+          <label
+            ><input type="radio" name="q3" value="b" /> İstifadəçiyə aid
+            şifrədir</label
+          >
+          <label
+            ><input type="radio" name="q3" value="c" /> Əvvəlcədən aşkarlanmayıb
+            və hələ bağlanmamış boşluq</label
+          >
+        </div>
 
-  <div class="question-block">
-    <p><strong>4. Firewall nə iş görür?</strong></p>
-    <label><input type="radio" name="q4" value="a" /> Kompüterin ekranını təmizləyir</label>
-    <label><input type="radio" name="q4" value="b" /> İnternet sürətini artırır</label>
-    <label><input type="radio" name="q4" value="c" /> Zərərli trafiki filtr edir və icazəsiz girişləri bloklayır</label>
-  </div>
+        <div class="question-block">
+          <p><strong>4. Firewall nə iş görür?</strong></p>
+          <label
+            ><input type="radio" name="q4" value="a" /> Kompüterin ekranını
+            təmizləyir</label
+          >
+          <label
+            ><input type="radio" name="q4" value="b" /> İnternet sürətini
+            artırır</label
+          >
+          <label
+            ><input type="radio" name="q4" value="c" /> Zərərli trafiki filtr
+            edir və icazəsiz girişləri bloklayır</label
+          >
+        </div>
 
-  <div class="question-block">
-    <p><strong>5. SCADA sistemi hansı sahəyə aiddir?</strong></p>
-    <label><input type="radio" name="q5" value="a" /> Ofis proqramları</label>
-    <label><input type="radio" name="q5" value="b" /> Sənaye və enerji nəzarət sistemləri</label>
-    <label><input type="radio" name="q5" value="c" /> Video oyunları</label>
-  </div>
+        <div class="question-block">
+          <p><strong>5. SCADA sistemi hansı sahəyə aiddir?</strong></p>
+          <label
+            ><input type="radio" name="q5" value="a" /> Ofis proqramları</label
+          >
+          <label
+            ><input type="radio" name="q5" value="b" /> Sənaye və enerji nəzarət
+            sistemləri</label
+          >
+          <label
+            ><input type="radio" name="q5" value="c" /> Video oyunları</label
+          >
+        </div>
 
-  <div class="question-block">
-    <p><strong>6. İki faktorlu autentifikasiya (2FA) nədir?</strong></p>
-    <label><input type="radio" name="q6" value="a" /> İki nəfərin eyni vaxtda giriş etməsi</label>
-    <label><input type="radio" name="q6" value="b" /> Giriş zamanı əlavə təsdiq kodu ilə qorunma</label>
-    <label><input type="radio" name="q6" value="c" /> Sadəcə parolun dəyişdirilməsi</label>
-  </div>
+        <div class="question-block">
+          <p><strong>6. İki faktorlu autentifikasiya (2FA) nədir?</strong></p>
+          <label
+            ><input type="radio" name="q6" value="a" /> İki nəfərin eyni vaxtda
+            giriş etməsi</label
+          >
+          <label
+            ><input type="radio" name="q6" value="b" /> Giriş zamanı əlavə
+            təsdiq kodu ilə qorunma</label
+          >
+          <label
+            ><input type="radio" name="q6" value="c" /> Sadəcə parolun
+            dəyişdirilməsi</label
+          >
+        </div>
 
-  <button type="button" onclick="checkQuiz()">Nəticəni Göstər</button>
-</form>
+        <button type="button" onclick="checkQuiz()">Nəticəni Göstər</button>
+      </form>
 
+      <div id="result"></div>
+    </div>
 
-    <div id="result"></div>
-  </div>
+    <script>
+      function checkQuiz() {
+        const answers = {
+          q1: "b",
+          q2: "c",
+          q3: "c",
+          q4: "c",
+          q5: "b",
+          q6: "b",
+        };
+        let score = 0;
+        const form = document.getElementById("quizForm");
+        const result = document.getElementById("result");
 
-  <script>
-    function checkQuiz() {
-      const answers = {
-  q1: "b",
-  q2: "c",
-  q3: "c",
-  q4: "c",
-  q5: "b",
-  q6: "b",
-};
-      let score = 0;
-      const form = document.getElementById("quizForm");
-      const result = document.getElementById("result");
-
-      for (let q in answers) {
-        const selected = form.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === answers[q]) {
-          score++;
+        for (let q in answers) {
+          const selected = form.querySelector(`input[name="${q}"]:checked`);
+          if (selected && selected.value === answers[q]) {
+            score++;
+          }
         }
+
+        result.innerHTML = `<p>Sizin nəticəniz: <strong>${score}/6</strong></p>`;
       }
-
-      result.innerHTML = `<p>Sizin nəticəniz: <strong>${score}/6</strong></p>`;
-    }
-  </script>
-  <script>
-    function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
-    }
-  </script>
-</body>
-
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
